@@ -5,7 +5,8 @@ var arr = [0,"ele1",{key : "value"},[0,1,2]]
 var obj = {
     key1 : "value1",
     key2 : "value2",
-    key3 : arr
+    key3 : arr,
+    key4 : { key: "value"}
 }
 
 // console logging
