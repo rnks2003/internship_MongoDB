@@ -1,5 +1,5 @@
 // Arrays 
-var arr = [0,"ele1",{key : "value"}]
+var arr = [0,"ele1",{key : "value"},[0,1,2]]
 
 // objects
 var obj = {
