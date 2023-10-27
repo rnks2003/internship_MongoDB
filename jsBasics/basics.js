@@ -1,11 +1,23 @@
 // Arrays 
-var arr = [0,"ele1",{key : "value"},[0,1,2]]
+var arr = [
+    // heterogenety
+    0,
+    "ele1",
+    // object in array
+    {
+        key : "value"
+    },
+    // array in array
+    [0,1,2]
+]
 
 // objects
 var obj = {
     key1 : "value1",
     key2 : "value2",
+    // array in object
     key3 : arr,
+    // object in object
     key4 : { key: "value"}
 }
 
