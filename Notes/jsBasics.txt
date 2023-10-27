@@ -1,6 +1,8 @@
 Trainer : Neeraj Kumar Reddy
+============================
 
 Day 1 | 26.10.23 :
+------------------
 
     .3-tier architecture
         .Browser   | HTML,CSS,JS
@@ -26,6 +28,7 @@ Day 1 | 26.10.23 :
             .if key includes special characters, explicitly cast to string
 
 Day 2 | 27.10.23 :
+------------------
 
     .Array of Objects
 
@@ -36,8 +39,22 @@ Day 2 | 27.10.23 :
     .JSON          | Java Script Object Notation
         .for parsing and transmitting data
 
-        .supports JS datatypes except 'undefined' + ObjectID
+        .supports JS datatypes except 'undefined'
         .supports data structures like arrays and objects
 
         .key should be bounded by quotation marks(" ")
         .loops and conditional statements are not allowed
+
+        .ObjectID
+            .acts as primary key
+            .12 byte hexadecimal string 
+                .4 byte - Timestamp
+                .5 byte - Random Value
+                .3 byte - Increment
+
+    .Database (storage container for storage of data in systematic/organised manner)
+        .CRUD operations
+            .Create
+            .Read
+            .Update
+            .Delete
