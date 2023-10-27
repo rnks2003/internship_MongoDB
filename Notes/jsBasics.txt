@@ -18,11 +18,24 @@ Day 1 | 26.10.23 :
         .null
         .boolean
         .undefined
-        .object    | { key : value }
+
+    .JS Data structures
         .Array
+        .object    | { key : value }
+            .key is internally stored as string 
+            .if key includes special characters, explicitly cast to string
 
 Day 2 | 27.10.23 :
 
     .Array of Objects
+
     .Setting up VS Code for JS
-    .Installing Node JS
+        .code runner extension
+    .Installing Node JS 
+
+    .JSON          | Java Script Object Notation
+        .for parsing and transmitting data
+        .supports datatypes except 'undefined'
+        .supports data structures like arrays and objects
+        .key should be bounded by quotation marks(" ")
+        .loops and conditional statements are not allowed
