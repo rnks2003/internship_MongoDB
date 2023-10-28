@@ -58,3 +58,23 @@ Day 2 | 27.10.23 :
             .Read
             .Update
             .Delete
+
+Day 3 | 28.10.23 :
+------------------
+
+    .MongoDB
+        .Schema less | Unstructured | NoSQL
+        .Platform independent
+        .Its a Distributed Database | supports horizontal scaling
+
+        .Features
+            .Ad-hoc queries
+            .Indexing
+            .Replication
+            .Load balancing
+            .File storage
+            .Aggregation
+            .Server-side JS execution
+            .Capped collections
+            .Transactions
+    
