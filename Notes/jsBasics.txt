@@ -94,4 +94,15 @@ Day 3 | 28.10.23 :
         .table vs document support
 
         .eg : sql, mysql vs MongoDB, Amazon
-
+    
+    .NoSQL DB types
+        .Document DB        
+            .JSON , BSON , XML 
+            .MongoDB
+        .Key-value DB 
+            .key-value pairs | no objects
+            .Amazon
+        .Graph DB 
+            .distributed storage
+        .Column oriented DB
+            .column dominent structure-less table
