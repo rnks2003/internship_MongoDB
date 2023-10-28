@@ -78,13 +78,15 @@ Day 3 | 28.10.23 :
             .Capped collections
             .Transactions
         
-        .SQL vs NoSQL
-            .verticle vs horizontal scaling
-            .schema vs not schema based
-            .RDBMS vs no RDBMS support
-            .small vs large data size
-            .ACID vs no ACID property support
-            .complex query,join vs no query,join support
-            .table vs document support
+    .SQL vs NoSQL
+        .verticle vs horizontal scaling  | Increase size of system | upgrade vs distributed system
+        .schema vs not schema based
+        .RDBMS vs no RDBMS support
+        .small vs large data size
+        .ACID vs no ACID property support
+        .complex query,join vs no query,join support
+        .table vs document support
 
-            .eg : sql, mysql vs MongoDB, Amazon
+        .eg : sql, mysql vs MongoDB, Amazon
+
+    
