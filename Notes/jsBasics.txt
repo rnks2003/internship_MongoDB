@@ -85,10 +85,10 @@ Day 3 | 28.10.23 :
         .small vs large data 
         
         .ACID vs no ACID property support
-            .Atomicity : The entire transaction occurs at once else doesnt occur at all
-            .Consistency : DB must be consistent before and after transaction
-            .Isolation : Multiple transaction ocuur independently without interference
-            .Durability : Changes of successful transaction occur even if system failure occurs
+            .Atomicity      : The entire transaction occurs at once else doesnt occur at all
+            .Consistency    : DB must be consistent before and after transaction
+            .Isolation      : Multiple transaction ocuur independently without interference
+            .Durability     : Changes of successful transaction occur even if system failure occurs
 
         .complex query,join vs no query,join support
         .table vs document support
@@ -105,4 +105,6 @@ Day 3 | 28.10.23 :
         .Graph DB 
             .distributed storage
         .Column oriented DB
-            .column dominent structure-less table
+            .dynamically modified columns
+
+    
