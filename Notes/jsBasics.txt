@@ -107,4 +107,53 @@ Day 3 | 28.10.23 :
         .Column oriented DB
             .dynamically modified columns
 
-    
+Day 4 | 30.10.23 : 
+------------------
+
+    .Terminologies
+        .table  -   collection
+        .row    -   document
+        .column -   property
+
+    .Advantages of MongoDB
+        .Schemaless
+        .platform independent
+        .supports horizontal scaling
+
+    .Disadvantages of MongoDB
+        .Doesnt support ACID properties
+        .requires more space
+        .cant fetch from multiple collections at a time 
+        .doesnt support join
+        .no auto-cleanup of disk space 
+
+    .Basic commands
+        .enter console
+            .mongosh
+        .clear console
+            .cls 
+            .console.clear()
+            .control + l | ( ^ + l )
+        .see current database 
+            .db 
+        .list databases
+            .show dbs
+        .list collections
+            .show collections
+
+    .CRUD operations
+        .Create
+            .Create a database  
+                .syntax : use databaseName
+            .Create a collection
+                .explicit method
+                    .syntax : db.createCollection("CollectionName")
+                .implicit method
+                    .syntax : db.collectionName.insertOne({})
+
+        .Delete
+            .Delete a collection
+                .syntax : db.collectionName.drop()
+            .Delete a database
+                .syntax : db.databaseName.drop()            | delete empty database 
+                .syntax : db.dropDatabase("databaseName")   | delete entire database, including all collections
