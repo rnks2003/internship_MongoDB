@@ -140,20 +140,27 @@ Day 4 | 30.10.23 :
             .show dbs
         .list collections
             .show collections
+        .check if collection is capped  
+            .db.collectionName.isCapped() | true if capped
 
     .CRUD operations
         .Create
             .Create a database  
                 .syntax : use databaseName
             .Create a collection
-                .explicit method
-                    .syntax : db.createCollection("CollectionName")
-                .implicit method
-                    .syntax : db.collectionName.insertOne({})
-
+                .Uncapped collection
+                    .explicit method
+                        .syntax : db.createCollection("CollectionName")
+                    .implicit method
+                        .syntax : db.collectionName.insertOne({})
+                .Capped collection
+                    .syntax : db.createCollection("CollectionName",
+                                                  { capped : true, size :<inBytes>, max : <noOfDocuments> })
+                
         .Delete
             .Delete a collection
                 .syntax : db.collectionName.drop()
             .Delete a database
                 .syntax : db.databaseName.drop()            | delete empty database 
                 .syntax : db.dropDatabase("databaseName")   | delete entire database, including all collections
+        
