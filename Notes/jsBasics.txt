@@ -159,6 +159,9 @@ Day 4 | 30.10.23 :
             .Create a document 
                 .Single insertion
                     .syntax : db.collectionName.insertOne({...})
+                .Multiple insertion
+                    .syntax : db.collectionName.insertMany([{...},...])
+
         .Delete
             .Delete a collection
                 .syntax : db.collectionName.drop()
@@ -166,3 +169,26 @@ Day 4 | 30.10.23 :
                 .syntax : db.databaseName.drop()            | delete empty database 
                 .syntax : db.dropDatabase("databaseName")   | delete entire database, including all collections
         
+Day 5 : 31.10.23 : 
+------------------
+
+        .Read   
+            .find()
+                .syntax : db.collectionName.find(query,projection,options)
+                .query - condition
+                .returns all documents
+
+            .findOne()
+                .syntax : db.collectionName.findOne(query,projection,options)
+                .returns only one document
+
+            .Access Nested object
+                .use dot(.) to access 
+                .bound key within quotation(" ") | dot is special character
+
+            .Using lamda functions
+                .syntax : db.collectionName.find().forEach(lamdaExp)
+                .lamdaExp - eg: x=>console.log(x)
+
+        .Import JSON File
+            .syntax : mongoImport fileName.json --db=databaseName --collection=collectionName --jsonArray

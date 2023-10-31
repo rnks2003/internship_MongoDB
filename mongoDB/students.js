@@ -1,4 +1,4 @@
-[{
+var a = [{
         name:"Ravi Narayana K S",
         age:20,
         phNo:9606374803,
