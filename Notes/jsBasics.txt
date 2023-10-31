@@ -156,7 +156,9 @@ Day 4 | 30.10.23 :
                 .Capped collection
                     .syntax : db.createCollection("CollectionName",
                                                   { capped : true, size :<inBytes>, max : <noOfDocuments> })
-                
+            .Create a document 
+                .Single insertion
+                    .syntax : db.collectionName.insertOne({...})
         .Delete
             .Delete a collection
                 .syntax : db.collectionName.drop()
