@@ -204,13 +204,13 @@ Day 6 : 01.11.23 :
         .Query and Projection Operators
             .Query Operators
                 .Comparison
-                    . == - $eq
-                    . != - $ne 
-                    . >  - $gt
-                    . <  - $lt
-                    . >= - $gte
-                    . <= - $lte
-                    . $in - check for equality in list
+                    .  ==  - $eq
+                    .  !=  - $ne 
+                    .  >   - $gt
+                    .  <   - $lt
+                    .  >=  - $gte
+                    .  <=  - $lte
+                    . $in  - check for equality in list
                     . $nin - check for inequality in list
 
                     .syntax : {key : {$xx: value}}
@@ -226,6 +226,15 @@ Day 7 : 02.11.23 :
 
                     .$not 
                         .syntax : { $not : {query} }
+
+                .Array 
+                    .$all
+                        .syntax : {$all:[value1,value2,...]}
+                    .$elemMatch
+                        .syntax : {$elemMatch:{query1,query2,...}}
+                    .$size
+                        .syntax : {$size:sizeOfValue}
+
 
         .Update Operators
         .Aggregation Pipeline Operators
