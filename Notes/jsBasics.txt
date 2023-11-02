@@ -172,23 +172,62 @@ Day 4 | 30.10.23 :
 Day 5 : 31.10.23 : 
 ------------------
 
-        .Read   
-            .find()
-                .syntax : db.collectionName.find(query,projection,options)
-                .query - condition
-                .returns all documents
+    .Read   
+        .find()
+            .syntax : db.collectionName.find(query,projection,options)
+            .query - condition
+            .returns all documents
 
-            .findOne()
-                .syntax : db.collectionName.findOne(query,projection,options)
-                .returns only one document
+        .findOne()
+            .syntax : db.collectionName.findOne(query,projection,options)
+            .returns only one document
 
-            .Access Nested object
-                .use dot(.) to access 
-                .bound key within quotation(" ") | dot is special character
+        .Using projection
+            .{key : bool}
+            .displays keys with bool value 1
 
-            .Using lamda functions
-                .syntax : db.collectionName.find().forEach(lamdaExp)
-                .lamdaExp - eg: x=>console.log(x)
+        .Access Nested object
+            .use dot(.) to access 
+            .bound key within quotation(" ") | dot is special character
 
-        .Import JSON File
-            .syntax : mongoImport fileName.json --db=databaseName --collection=collectionName --jsonArray
+        .Using lamda functions
+            .syntax : db.collectionName.find().forEach(lamdaExp)
+            .lamdaExp - eg: x=>console.log(x)
+
+    .Import JSON File
+        .syntax : mongoImport fileName.json --db=databaseName --collection=collectionName --jsonArray
+
+Day 6 : 01.11.23 : 
+------------------
+
+    .Operators
+        .Query and Projection Operators
+            .Query Operators
+                .Comparison
+                    . == - $eq
+                    . != - $ne 
+                    . >  - $gt
+                    . <  - $lt
+                    . >= - $gte
+                    . <= - $lte
+                    . $in - check for equality in list
+                    . $nin - check for inequality in list
+
+                    .syntax : {key : {$xx: value}}
+
+Day 7 : 02.11.23 :
+------------------
+
+                .Logical
+                    .$and
+                    .$or 
+                    .$nor
+                        .syntax : { $xx :[{query1},{query2},...] }
+
+                    .$not 
+                        .syntax : { $not : {query} }
+
+        .Update Operators
+        .Aggregation Pipeline Operators
+        .Aggregation Pipeline Stages
+
