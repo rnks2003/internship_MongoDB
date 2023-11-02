@@ -233,8 +233,7 @@ Day 7 : 02.11.23 :
                     .$elemMatch
                         .syntax : {$elemMatch:{query1,query2,...}}
                     .$size
-                        .syntax : {$size:sizeOfValue}
-
+                        .syntax : {$size:numberOfValues}
 
         .Update Operators
         .Aggregation Pipeline Operators
