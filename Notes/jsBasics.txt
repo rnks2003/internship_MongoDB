@@ -235,7 +235,40 @@ Day 7 : 02.11.23 :
                     .$size
                         .syntax : {$size:numberOfValues}
 
-        .Update Operators
-        .Aggregation Pipeline Operators
-        .Aggregation Pipeline Stages
+Day 8 : 03.11.23 : 
+------------------
 
+            .Projection Operators
+                .$
+                    .return first match 
+                    .syntax : db.collectionName.find({Query},{arrayName:{condition}},{"arrayName.$":1})
+
+                .$elemMatch
+                    .db.collectionName.find({Query},{arrayName:{$elemMatch:{filter1,filter2,...}}})
+                
+                $slice
+                    .syntax : db.collectionName.find({Query},{arrayName:{$slice:endIndex}})
+                    or
+                    .syntax : db.collectionName.find({Query},{arrayName:{$slice:[startIndex,numberOfValues]}})
+
+    .Update
+        .updateOne()
+            .syntax : db.collectionName.updateOne(filter,update,option)
+            .requires atomic Operators
+                .$set
+                .$upsert // option 
+
+                .timestamp
+                    .syntax : db.collectionName.updateOne(filter,{update, $currentDate:{keyName : true}})
+        .updateMany()
+
+Day 9 : 04.11.23 :
+------------------
+
+    .Delete
+        .deleteOne()
+            .syntax : db.collectionName.deleteOne(filter)
+
+        .deleteMany()
+            .syntax : db.collectionName.deleteMany(filter)
+            .if no filter is passed, all documents are deleted
