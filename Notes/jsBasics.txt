@@ -256,7 +256,7 @@ Day 8 : 03.11.23 :
             .syntax : db.collectionName.updateOne(filter,update,option)
             .requires atomic Operators
                 .$set
-                .$upsert // option 
+                .upsert // option 
 
                 .timestamp
                     .syntax : db.collectionName.updateOne(filter,{update, $currentDate:{keyName : true}})
@@ -272,3 +272,34 @@ Day 9 : 04.11.23 :
         .deleteMany()
             .syntax : db.collectionName.deleteMany(filter)
             .if no filter is passed, all documents are deleted
+
+    .Operators
+        .update operators 
+            .$inc 
+                .increment value by specified amount
+                .syntax : {$inc:{key: value}}
+                .if key doesnt exist, it creates new key:value 
+
+            .$min 
+                .syntax : {$min:{key:value}}
+
+            .$max 
+                .syntax : {$max:{key:value}}
+
+            .$mul
+                .syntax : {$mul:{key:value}}
+
+            .$rename
+                .syntax : {$rename:{key:newKey}}
+
+            .$set 
+                .syntax : {$set:{key:value}}
+
+            .$unset 
+                .syntax : {$unset:{key:""}}
+
+            .$
+                .update first match from array 
+
+            .$[]
+                .update multiple elements of array
