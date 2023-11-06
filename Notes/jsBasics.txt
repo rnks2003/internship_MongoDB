@@ -155,7 +155,10 @@ Day 4 | 30.10.23 :
                         .syntax : db.collectionName.insertOne({})
                 .Capped collection
                     .syntax : db.createCollection("CollectionName",
-                                                  { capped : true, size :<inBytes>, max : <noOfDocuments> })
+                                                  { capped : true, 
+                                                    size :<inBytes>,
+                                                    max : <noOfDocuments> 
+                                                    })
             .Create a document 
                 .Single insertion
                     .syntax : db.collectionName.insertOne({...})
@@ -259,7 +262,7 @@ Day 8 : 03.11.23 :
                 .upsert // option 
 
                 .timestamp
-                    .syntax : db.collectionName.updateOne(filter,{update, $currentDate:{keyName : true}})
+                    .syntax : db.collectionName.updateOne/Many(filter,{update, $currentDate:{keyName : true}})
         .updateMany()
 
 Day 9 : 04.11.23 :
@@ -303,3 +306,39 @@ Day 9 : 04.11.23 :
 
             .$[]
                 .update multiple elements of array
+
+Day 10 : 06.11.23 : 
+-------------------
+
+    .arrayFilters : 
+        .$[identifier]
+            .syntax : db.collectionName.updateOne/Many({},
+                                                        {updateOperator:{"key.$[identifier]":newValue}},
+                                                        {arrayFilters : {identifier:{condition}}} )
+
+    .$push
+        .syntax : {$push:{key:value}}
+        .append element to array
+
+    .$pull
+        .syntax : {$pull:{key:value}}
+
+    .$pop 
+        .syntax : {$pop:{key:-1/1}}
+        .-1 - first element
+        . 1 - last element
+
+//learn GridFS
+//learn geospacial operations
+
+    .Bulk operations
+        .bulkWrite
+            .syntax : db.collectionName.bulkWrite([operation1,operation2,...])
+            .insertMany() is unsupported
+            .supported operations
+                .insertOne
+                .updateOne
+                .updateMany
+                .deleteOne
+                .deleteMany
+                .replaceOne
