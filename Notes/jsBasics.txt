@@ -342,3 +342,17 @@ Day 10 : 06.11.23 :
                 .deleteOne
                 .deleteMany
                 .replaceOne
+                    .syntax : db.collectionName.replaceOne(filter,replacement)
+
+    .Cursors (used with find())
+        .count()
+            .syntax : find().count()
+        .forEach()
+            .syntax : find().forEach(function)
+        .limit()
+            .specify the maximum number of documents to returned
+            .syntax : find().limit(int)
+        .sort()
+            .syntax : find().sort({key:-1/1})
+            .-1 - descending order
+            . 1 - ascending order
