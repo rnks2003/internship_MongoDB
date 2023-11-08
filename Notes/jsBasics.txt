@@ -356,3 +356,44 @@ Day 10 : 06.11.23 :
             .syntax : find().sort({key:-1/1})
             .-1 - descending order
             . 1 - ascending order
+
+Day 11 : 07.11.23 :
+-------------------
+
+    .Aggregation
+        .syntax : db.collectionName.aggregate([{stage1},{stage2},...])
+
+        .SQL vs MongoDB
+            .Where - $match
+            .Group by - $group 
+            .Having - $match 
+            .Order by - $sort 
+
+        .$match
+            .syntax : db.collectionName.aggregate([{$match:{query}}])
+            .equivalent to db.collectionName.find({query})
+            .must be first stage of aggregatio pipeline
+        $project 
+            .syntax : db.collectionName.aggregate([{$project:{key:bool}}])
+            .equivalent to db.collectionName.find({},{key:bool})
+        .$group
+            .syntax : db.collectionName.aggregate([{$group:{_id:"$key", newKey:{$xx:value}}}])
+            ._id - group by key
+            .newKey - key in group 
+                .$sum
+                .$avg
+                .$min
+                .$max
+                .$push
+                .$addToSet
+                .$first
+                .$last
+        .$sort
+            .syntax : db.collectionName.aggregate([{$sort:{key:-1/1}}])
+            .-1 - descending order
+            . 1 - ascending order 
+
+Day 12 : 08.11.23 : 
+-------------------
+
+        .
