@@ -380,35 +380,66 @@ Day 11 : 07.11.23 :
             .syntax : db.collectionName.aggregate([{$sort:{key:-1/1}}])
             .-1 - descending order
             . 1 - ascending order 
+        .$limit
+            .syntax : {$limit:posIntValue}
+            .limits number of documents passed to next stage
         .$group
             .syntax : db.collectionName.aggregate([{$group:{_id:"$key", newKey:{$xx:value}}}])
             ._id - group by key
             .newKey - key in group 
-                .$push
-                .$count
-                .$sum
-                .$max
-                .$min
-                .$avg
-                .$addToSet
-                .$first
-                .$last
+    .Aggregation pipeline operators 
+        .$push
+        .$count
+        .$sum
+        .$max
+        .$min
+        .$avg
+        .$concat 
+        .$cond
+        .$first
+        .$last
+        .$ceil 
+        .$floor 
+        .$add
+        .$multiply
+        .$divide
+        .$subtract
+        .$mod 
 
 Day 12 : 08.11.23 : 
 -------------------
 
-            .$count
-                .syntax : newKey:{$count:{}}
-                .results in key:count(groupMembers)
+        .$count
+            .syntax : newKey:{$count:{}}
+            .results in key:count(groupMembers)
 
-            .$max
-                .syntax : newKey:{$max:key}
-                .find max value corresponding to key 
+        .$max
+            .syntax : newKey:{$max:key}
+            .find max value corresponding to key 
 
-            .$min
-                .syntax : newKey:{$min:key}
-                .find min value corresponding to key
+        .$min
+            .syntax : newKey:{$min:key}
+            .find min value corresponding to key
 
-            .$avg
-                .syntax : newKey:{$avg:key}
-                .find  avg of values corresponding to key
+        .$avg
+            .syntax : newKey:{$avg:key}
+            .find  avg of values corresponding to key
+
+Day 13 : 09.11.23 :
+-------------------
+        .$concat 
+        .$add
+        .$multiply
+        .$divide
+        .$subtract
+        .$mod 
+        .$addToSet
+
+Day 14 : 10.11.23 :
+-------------------
+
+        .$cond
+            .syntax : {$cond:{if:<boolean exp>,then:<true-case>,else:<false-case>}}
+
+        .$switch
+            .syntax : $switch:{branches:[{case:<exp>,then:<exp>},...],default:<exp>}
