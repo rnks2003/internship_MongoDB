@@ -443,3 +443,28 @@ Day 14 : 10.11.23 :
 
         .$switch
             .syntax : $switch:{branches:[{case:<exp>,then:<exp>},...],default:<exp>}
+
+    Schema
+        .its a json object
+        .cant be created for Admin,Local,Config
+        .lets you create validation rules for fields
+        .should be mentioned at the time of creation 
+
+        .syntax : db.createCollection("collectionName",{
+                        validator:{
+                            $jsonSchema:{
+                                bsonType:"object",
+                                required:[requiredKey1,requiredKey2,...],
+                                properties:{
+                                    requiredKey1:{
+                                        bsonType:dataType,
+                                        description:errorMsg
+                                    },
+                                    requiredKey2:{
+                                        bsonType:dataType
+                                        description:errorMsg
+                                    }
+                                }
+                            }
+                        }
+                })
