@@ -328,6 +328,10 @@ Day 10 : 06.11.23 :
         .-1 - first element
         . 1 - last element
 
+    .$addToSet
+        .syntax : {$addToSet:{key:value}}
+        .appends new element if it doesnt exist in array
+
 //learn GridFS
 //learn geospacial operations
 
